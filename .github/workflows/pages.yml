@@ -25,9 +25,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm i
       - run: npm run build
-      - env:
-        VITE_REACT_APP_SANITY_PROJECT_ID: ${{secrets.VITE_REACT_APP_SANITY_PROJECT_ID}}
-        VITE_REACT_APP_SANITY_TOKEN: ${{secrets.VITE_REACT_APP_SANITY_TOKEN}}
+        env:
+          VITE_REACT_APP_SANITY_PROJECT_ID: ${{secrets.VITE_REACT_APP_SANITY_PROJECT_ID}}
+          VITE_REACT_APP_SANITY_TOKEN: ${{secrets.VITE_REACT_APP_SANITY_TOKEN}}
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
