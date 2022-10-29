@@ -79,7 +79,7 @@ export default function HexagonCanvas() {
           <Environment
             background={false}
             files={"hdr1.hdr"}
-            path={"/portfolio/"}
+            path={import.meta.env.Mode === "production" ? "/portfolio/" : "/"}
           />
 
           <OrbitControls
