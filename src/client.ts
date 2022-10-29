@@ -2,17 +2,11 @@ import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 export const client = sanityClient({
-  projectId:
-    import.meta.env.MODE === "production"
-      ? process.env.VITE_REACT_APP_SANITY_PROJECT_ID
-      : import.meta.env.VITE_REACT_APP_SANITY_PROJECT_ID,
+  projectId: "1x87zz4g",
   dataset: "production",
   apiVersion: "2022-02-01",
   useCdn: true,
-  token:
-    import.meta.env.MODE === "production"
-      ? process.env.VITE_REACT_APP_SANITY_TOKEN
-      : import.meta.env.VITE_REACT_APP_SANITY_TOKEN,
+  token: import.meta.env.VITE_REACT_APP_SANITY_TOKEN,
 });
 
 const builder = imageUrlBuilder(client);
