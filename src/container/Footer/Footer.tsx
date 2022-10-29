@@ -60,7 +60,7 @@ const Footer = () => {
           </a>
         </div> */}
       </div>
-      <h2 className="head-text">
+      {/* <h2 className="head-text">
         Or Leave a <span>Message</span> ...
       </h2>
 
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       ) : (
         <h3 className="head-text">Thank You For Getting in Touch!</h3>
-      )}
+      )} */}
     </div>
   );
 };
