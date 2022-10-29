@@ -199,7 +199,8 @@
          background-color: #fff;
          top: -25px;
          right: 50%;
-         translate: 50% 0;
+         //translate: 50% 0;
+         transition: translate(50% , 0%)
     }
 
     a {
