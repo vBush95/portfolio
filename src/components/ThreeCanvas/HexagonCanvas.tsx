@@ -76,7 +76,11 @@ export default function HexagonCanvas() {
 
           <CustomContactShadow />
           {/* <Environment preset="city" resolution={512} /> */}
-          <Environment background={false} files={"hdr1.hdr"} path={"/"} />
+          <Environment
+            background={false}
+            files={"hdr1.hdr"}
+            path={"/portfolio"}
+          />
 
           <OrbitControls
             minPolarAngle={Math.PI / 2}
