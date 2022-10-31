@@ -1,9 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+
+@font-face {
+  font-family: "Bungee";
+  src: local("Bungee"),
+   url("./fonts/Bungee/Bungee-Regular.ttf") format("truetype");
+  font-weight: normal;
+  }
 
 :root {
   /* --font-base: "DM Sans", sans-serif;   */
   --font-navbar: "Bungee", sans-serif;
-  --font-base:'Nunito Sans', sans-serif;
+  --font-base:'Bungee', sans-serif;
 
   --font-size1: 0.618rem;
   --font-siez2: 1rem;
