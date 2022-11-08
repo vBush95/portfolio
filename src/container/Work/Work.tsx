@@ -48,8 +48,8 @@ const Work = () => {
     const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
+      setWorks(data.reverse());
+      setFilterWork(data.reverse());
       // console.log(data);
     });
   }, []);
@@ -88,7 +88,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.reverse().map((work, index) => (
+        {filterWork.map((work, index) => (
           // <div className="app__work-item app__flex" key={`${index}-${work}`}>
           <div className="app__work-item " key={`${index}-${work}`}>
             <div className="app__work-img app__flex">
