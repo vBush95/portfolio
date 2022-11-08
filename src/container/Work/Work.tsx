@@ -39,7 +39,9 @@ const Work = () => {
       if (item === "All") {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(
+          works.filter((work) => work.tags.includes(item)).reverse()
+        );
       }
     }, 500);
   };
@@ -88,7 +90,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.reverse().map((work, index) => (
+        {filterWork.map((work, index) => (
           // <div className="app__work-item app__flex" key={`${index}-${work}`}>
           <div className="app__work-item " key={`${index}-${work}`}>
             <div className="app__work-img app__flex">
