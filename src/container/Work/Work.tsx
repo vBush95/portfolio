@@ -37,11 +37,9 @@ const Work = () => {
       setAnimateCard({ y: 0, opacity: 1 });
 
       if (item === "All") {
-        setFilterWork(works.reverse());
+        setFilterWork(works);
       } else {
-        setFilterWork(
-          works.filter((work) => work.tags.includes(item)).reverse()
-        );
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
     }, 500);
   };
@@ -50,8 +48,8 @@ const Work = () => {
     const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
-      setWorks(data.reverse());
-      setFilterWork(data.reverse());
+      setWorks(data);
+      setFilterWork(data);
       // console.log(data);
     });
   }, []);
@@ -90,7 +88,7 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.reverse().map((work, index) => (
+        {[...filterWork].reverse().map((work, index) => (
           // <div className="app__work-item app__flex" key={`${index}-${work}`}>
           <div className="app__work-item " key={`${index}-${work}`}>
             <div className="app__work-img app__flex">
